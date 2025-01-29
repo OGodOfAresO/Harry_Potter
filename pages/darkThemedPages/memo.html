@@ -1,0 +1,57 @@
+  
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="css/memo.css"></link>
+  <script src="scripts/app.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+ 
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <section class="bg">
+
+  <div class="player"> 
+    <button class="play" onclick="document.getElementById('player').play()"><i class="fas fa-play"></i></button> 
+    <button class="pause" onclick="document.getElementById('player').pause()"><i class="fas fa-pause"></i></button> 
+    <button class="volup" onclick="document.getElementById('player').volume += 0.1"><i class="fas fa-volume-up"></i></button> 
+    <button class="voldown" onclick="document.getElementById('player').volume -= 0.1"><i class="fas fa-volume-down"></i></button> 
+    <button class="goback"><a href="./index.html"><i class="fas fa-home"></i></a></button> 
+  </div>
+  <audio
+  autoplay loop
+  src="audio/memory.mp3" id="player">
+      Your browser does not support the
+       element.
+</audio>
+
+
+
+  <h1 style="padding: 10px 100px;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  font-size: 60px;
+  color:gold;">
+  Score:<span id="result"></span></h1>
+
+  <section>
+
+  <div class="grid">
+      
+  </div>
+</section>
+
+
+
+</section>
+  
+
+</body>
+</html>

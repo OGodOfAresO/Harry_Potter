@@ -1,0 +1,277 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 11px 0 9px;
+
+}
+@media (max-width: 768px) {
+    .navbar-container{
+        display: none;
+    }
+    .header-list-elem li:nth-child(1),
+    .header-list-elem li:nth-child(2),
+    .header-list-elem li:nth-child(3),
+    .header-list-elem li:nth-child(4),
+    
+    .header-list-elem li:nth-child(7) {
+      display: none;
+    }
+}
+.wiz-logo {
+    margin: 0 auto;
+}
+
+.icons-container {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 65px;
+}
+
+.icons-container li {
+    margin-right: 14px;
+}
+.hovericon{
+    transition: 0.4s ease-in-out;
+}
+.hovericon:hover {
+    transform: rotateY(180deg);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+
+}
+
+/* .search-field {
+    background: #353434;
+    color: white;
+} */
+
+.search-icon {
+    position: absolute;
+    margin: 2px 0px 0px 155px;
+}
+
+.button1 {
+    background: black;
+    border: 1px solid black;
+    color: white;
+    margin: 7px;
+    padding: 6px;
+    font-family: Poppins;
+    cursor: pointer;
+}
+
+.button1:hover {
+    background-color: #353434;
+    border-radius: 3px;
+    
+}
+
+.button2 {
+    background: #4642a6;
+    margin: 7px;
+    color: white;
+    font-family: Poppins;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #4642a6;
+    cursor: pointer;
+}
+.button2:hover{
+    filter: brightness(1.5);
+    transition: filter 0.3s ease-in-out;
+}
+
+.header-list-elem {
+    display: flex;
+    color: white;
+    list-style: none;
+    background-color: black;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.header-list-elem-style {
+    cursor: pointer;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.header-list-elem-style::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: rgb(130, 21, 169);
+    bottom: -3px; 
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+.header-list-elem-style:hover::after {
+    width: 100%;
+}
+
+.arrows {
+    transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+/* added classes for the rotation (logic implemented using classList property) */
+.rotate-270 {
+    transform: rotate(270deg);
+}
+
+.rotate-90 {
+    transform: rotate(90deg);
+}
+.second-container{
+    width: 100%;
+    height: 100%;
+    background-image: url(images/hp-f6-harry-at-slug-club-homepage-hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: max(1200px, 100vw);
+    overflow: hidden;
+    box-shadow: inset 0px 0px 50px rgb(0, 0, 1);
+}
+@media (max-width: 768px) {
+    .second-container {
+        width: 100%;
+        height: 150%;
+        background-image: url(images/hp-f6-harry-at-slug-club-homepage-hero.jpg);
+        background-repeat: no-repeat;
+        /* background-position: center center; */
+        background-size: max(1600px, 100vw);
+        overflow: hidden;
+        box-shadow: inset 0px 0px 50px rgb(0, 0, 1);
+    }
+}
+
+.second-header-text{
+    /* font-family: Bluu Next,ヒラギノ角ゴ Pro W3,Hiragino Kaku Gothic Pro,Osaka,メイリオ,Meiryo,ＭＳ Ｐゴシック,MS PGothic,serif; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    margin-top:90px;
+    text-align: center;
+    text-shadow: 0 0 20px #000;
+    margin-bottom: 30px;
+}
+.subheader{
+    font-family: Poppins;
+    display:flex ;
+font-size: 20px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: white;
+    text-shadow: 0 0 20px #000;
+}
+.explore-btn{
+    padding: 15px 20px;
+    margin: 18px;
+    font-family: Poppins;
+    font-size: 16px;
+    border-radius: 50px;
+    font-weight: 600;
+    background-color:transparent;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+
+    transition: 0.3s ease-out;
+}
+.explore-btn:hover{
+    color: black;
+    background-color: rgb(255, 245, 245);
+    border: white;
+    
+}
+.popup-image{
+    z-index: 10002;
+    background-color: #10141B;
+    
+display: none;
+    
+    justify-content: center;
+    box-shadow: inset 0px 0px 50px rgb(20, 20, 30);
+position: absolute;
+
+width:100%;
+transition: 0.5s ease-in-out;
+
+
+}
+/* .popup-image-appear{
+    z-index: 10002;
+    
+    
+
+    display:flex;
+    justify-content: center;
+    box-shadow: inset 0px 0px 50px rgb(20, 20, 30);
+position: absolute;
+flex-flow: column;
+width:100vw;
+
+
+
+} */
+.popup-image img{
+    height: 130px;
+    width: 130px;
+    padding: 10px;
+    /* filter: brightness(0.7); */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+.hidden-img1{
+    margin-left:620px
+}
+.popup-image img:hover{
+    transform: translateY(-10px); /* Lifts the hovered image */
+    opacity: 1; /* Ensures the hovered image stays fully visible */
+}
+.popup-image img:not(:hover){
+    opacity: 0.6;
+}
+.text-popup{
+    color: white;
+    position: absolute;
+    z-index: 100002;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    top: 82px;
+    /*left:684px; */
+    display: flex;
+    padding: 1px 15px 1px 0px;
+    font-size: 12px;
+    justify-content: space-around;
+    gap: 90px;
+    font-weight: 500;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.text-popup:hover{
+    transform: translateY(-10px); /* Lifts the hovered image */
+    opacity: 1; /* Ensures the hovered image stays fully visible */
+}
